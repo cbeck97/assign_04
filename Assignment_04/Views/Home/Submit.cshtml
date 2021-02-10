@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Submit";
+}
+
+@model Assignment_04.Models.Suggestions
+
+<div class="text-center">
+    <h1 class="display-4">Enter Restaurant Suggestion:</h1>
+    <br />
+    <form asp-action="Submit" method="post">
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label">Your Name:</label>
+            <div class="col-sm-10">
+                <input asp-for="Name" type="text" class="form-control" placeholder="Your Name Here..." />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Restaurant" class="col-sm-2 col-form-label">Restaurant:</label>
+            <div class="col-sm-10">
+                <input asp-for="Restaurant" type="text" class="form-control" placeholder="Restaurant Name..." />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="FavDish" class="col-sm-2 col-form-label">Favorite Dish:</label>
+            <div class="col-sm-10">
+                <input asp-for="FavDish" type="text" class="form-control" placeholder="Favorite Dish..." />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Phone" class="col-sm-2 col-form-label">Restaurant Phone Number:</label>
+            <div class="col-sm-10">
+                <input asp-for="Phone" type="text" class="form-control" placeholder="###-###-####" />
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <button type="submit" class="btn btn-primary">Add Restaurant</button>
+    </form>
+
+    <div asp-validation-summary="All"></div>
+
+</div>

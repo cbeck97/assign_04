@@ -1,14 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Suggestions";
 }
 
 @model IEnumerable<string>
 
 <div class="text-center">
-    <h1 class="display-4">Favorite Restaurants</h1>
+    <h1 class="display-4">Suggestions</h1>
     <br />
     <ul class="list-group">
-        @foreach(string i in Model)
+        @foreach (string i in Model)
         {
             <li class="list-group-item">@Html.Raw(i)</li>
         }
